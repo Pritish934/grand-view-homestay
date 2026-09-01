@@ -16,8 +16,8 @@ const rooms = [
   {
     id: 1,
     name: "Grand View Suite",
-    image: "/images/room-1.jpeg",
-    price: "₹4,500",
+    image: "/images/room.jpeg",
+    price: "₹2,500",
     period: "per night",
     description:
       "A quiet suite with a private balcony overlooking the hills and valley.",
@@ -25,8 +25,8 @@ const rooms = [
   {
     id: 2,
     name: "Valley Room",
-    image: "/images/room-2.jpeg",
-    price: "₹3,200",
+    image: "/images/room.jpeg",
+    price: "₹2,800",
     period: "per night",
     description:
       "A warm, intimate room designed for slow mornings and peaceful evenings.",
@@ -36,37 +36,37 @@ const rooms = [
 const galleryImages = [
   {
     id: 1,
-    src: "/images/gallery-1.jpeg",
+    src: "/images/cloudview.jpeg",
     alt: "Mountain view from the homestay",
     className: "md:col-span-2 md:row-span-2",
   },
   {
     id: 2,
-    src: "/images/gallery-2.jpeg",
+    src: "/images/homestay.jpeg",
     alt: "Cozy homestay interior",
     className: "md:row-span-1",
   },
   {
     id: 3,
-    src: "/images/gallery-3.jpeg",
+    src: "/images/hillview.jpeg",
     alt: "Balcony overlooking the valley",
     className: "md:row-span-2",
   },
   {
     id: 4,
-    src: "/images/gallery-4.jpeg",
+    src: "/images/balcony.jpeg",
     alt: "Morning view",
     className: "md:col-span-1",
   },
   {
     id: 5,
-    src: "/images/gallery-5.jpeg",
+    src: "/images/sunrise.jpeg",
     alt: "Homestay details",
     className: "md:col-span-2",
   },
   {
     id: 6,
-    src: "/images/gallery-6.jpeg",
+    src: "/images/outdoor.jpeg",
     alt: "Evening at the homestay",
     className: "md:col-span-1",
   },
