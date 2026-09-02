@@ -33,7 +33,7 @@ export default function Stay() {
 
           <div className="bg-pine rounded-lg p-8 md:p-10 md:sticky md:top-28">
             <p className="text-mist/60 text-sm mb-2">Per night</p>
-            <p className="font-display text-mist text-5xl mb-1">₹2,500</p>
+            <p className="font-display text-mist text-5xl mb-1">₹3000-₹7000</p>
             <p className="text-mist/50 text-sm mb-8">
               Breakfast included, taxes as applicable
             </p>
