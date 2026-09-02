@@ -15,18 +15,18 @@ const stars = Array.from({ length: 32 }, (_, i) => ({
 const rooms = [
   {
     id: 1,
-    name: "Grand View Suite",
-    image: "/images/room.jpeg",
-    price: "₹2,500",
-    period: "per night",
+    name: "Normal Cottage with One room",
+    image: "/images/homestay.jpeg",
+    price: "₹3000",
+    period: "with breakfast",
     description:
-      "A quiet suite with a private balcony overlooking the hills and valley.",
+      "A quiet suite with a private balcony overlooking the hills and valley with 2 single cottage with 1 double bed",
   },
   {
     id: 2,
-    name: "Valley Room",
-    image: "/images/room.jpeg",
-    price: "₹2,800",
+    name: "Family Cottage with 2 double beds and 2 single beds",
+    image: "/images/cottage.jpeg",
+    price: "₹7000",
     period: "per night",
     description:
       "A warm, intimate room designed for slow mornings and peaceful evenings.",
@@ -42,7 +42,7 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "/images/homestay.jpeg",
+    src: "/images/balcony-cloud.jpeg",
     alt: "Cozy homestay interior",
     className: "md:row-span-1",
   },
@@ -95,7 +95,6 @@ export default function ViewSection() {
       {/* =====================================================
           VIEW SECTION
       ===================================================== */}
-
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-36">
         <div className="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
           {/* TEXT */}
@@ -258,9 +257,116 @@ export default function ViewSection() {
       </div>
 
       {/* =====================================================
+          SEVEN SISTERS WATERFALL
+      ===================================================== */}
+      <div className="bg-[#E8ECE7] py-24 md:py-36">
+        <div className="max-w-6xl mx-auto px-6 md:px-10">
+          <div className="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
+            {/* WATERFALL IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94, x: -40 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 1.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="relative rounded-xl overflow-hidden aspect-[4/5] bg-pine group"
+            >
+              <motion.div
+                className="absolute inset-0"
+                whileHover={{ scale: 1.05 }}
+                transition={{
+                  duration: 1.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <Image
+                  src="/images/Seven sisters falls.jpg"
+                  alt="Seven Sisters Waterfall near Grand View Homestay"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+
+              {/* Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+              {/* Caption */}
+              <motion.div
+                className="absolute bottom-5 left-5 z-20 text-white/90 text-sm"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 0.5,
+                  duration: 0.7,
+                }}
+              >
+                Seven Sisters Waterfall
+              </motion.div>
+
+              {/* Number */}
+              <span className="absolute top-5 right-5 z-20 text-white/70 text-xs tracking-widest">
+                02 / LOCATION
+              </span>
+            </motion.div>
+
+            {/* TEXT */}
+            <motion.div
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <p className="text-moss text-sm mb-4 tracking-wide uppercase">
+                Right outside your stay
+              </p>
+
+              <h2 className="font-display text-pine text-4xl md:text-6xl leading-[1.05] text-balance mb-7">
+                Wake up
+                <br />
+                <span className="text-moss">to Seven Sisters.</span>
+              </h2>
+
+              <p className="text-slate leading-relaxed max-w-prose">
+                Grand View Homestay sits directly opposite the breathtaking
+                Seven Sisters Waterfall, putting one of the region's most
+                beautiful natural landmarks right in front of you.
+              </p>
+
+              <p className="text-slate leading-relaxed max-w-prose mt-5">
+                No long drives, no complicated routes. Step outside, look across
+                the valley and watch the waterfall transform with the changing
+                light throughout the day.
+              </p>
+
+              {/* Highlight */}
+              <div className="mt-8 border-l-2 border-moss pl-5">
+                <p className="font-display text-pine text-xl md:text-2xl leading-relaxed">
+                  “The waterfall is right opposite the homestay.”
+                </p>
+
+                <p className="text-stone text-sm mt-3 tracking-wide">
+                  — Seven Sisters Waterfall
+                </p>
+              </div>
+
+              {/* Location detail */}
+              <div className="mt-8 flex items-center gap-3 text-moss text-sm">
+                <span className="w-8 h-px bg-moss" />
+                <span className="uppercase tracking-widest">
+                  Just across the valley
+                </span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* =====================================================
           ROOMS
       ===================================================== */}
-
       <div className="bg-[#E8ECE7] py-24 md:py-36">
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           <motion.div
@@ -361,11 +467,9 @@ export default function ViewSection() {
           </div>
         </div>
       </div>
-
       {/* =====================================================
           GALLERY
       ===================================================== */}
-
       <div className="bg-mist py-24 md:py-36">
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           {/* Heading */}
@@ -455,11 +559,9 @@ export default function ViewSection() {
           </div>
         </div>
       </div>
-
       {/* =====================================================
           LIGHTBOX
       ===================================================== */}
-
       {activeImage && (
         <motion.div
           initial={{ opacity: 0 }}
